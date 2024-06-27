@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:shoes_bloc/bloc/shoes.dart';
+import 'package:shoes_bloc/model/shoes.dart';
 
 abstract class shoesState {
   const shoesState();

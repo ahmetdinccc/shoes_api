@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:like_button/like_button.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
+
 import 'package:shoes_bloc/bloc/basket_cubit.dart';
 import 'package:shoes_bloc/bloc/basket_state.dart';
 import 'package:shoes_bloc/bloc/shoes_cubit.dart';
 import 'package:shoes_bloc/bloc/shoes_repository.dart';
 import 'package:shoes_bloc/bloc/shoes_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shoes_bloc/bloc/basket_screen.dart';
-import 'package:shoes_bloc/bloc/shoes.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:shoes_bloc/page/basket_screen.dart';
 
-import 'package:shoes_bloc/bloc/bloc_shoes_view.dart';
 import 'package:shoes_bloc/widget/shoes_widget.dart';
 
 class BlocshoesView extends StatefulWidget {
@@ -53,7 +48,7 @@ class _BlocshoesViewState extends State<BlocshoesView> {
   Scaffold buildScaffold(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Senin Ayakkabın",
+            "Nike",
             style: TextStyle(fontSize: 25),
           ),
           centerTitle: true,
@@ -73,7 +68,7 @@ class _BlocshoesViewState extends State<BlocshoesView> {
                           MaterialPageRoute(builder: (context) => basketView()),
                         );
                       },
-                      icon: Icon(
+                      icon:const Icon(
                         Icons.shopping_cart,
                         size: 25,
                       ),
@@ -94,7 +89,7 @@ class _BlocshoesViewState extends State<BlocshoesView> {
                                     .basketItems
                                     .length
                                     .toString(),
-                                style: TextStyle(
+                                style:const TextStyle(
                                   color: Colors.white,
                                   fontSize: 12,
                                 ),
@@ -171,7 +166,7 @@ class _BlocshoesViewState extends State<BlocshoesView> {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color.fromARGB(255, 255, 0, 0),
           items: [
-            BottomNavigationBarItem(
+          const  BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined), label: 'Ana Sayfa'),
             BottomNavigationBarItem(
               icon: BlocBuilder<BasketCubit, basketState>(
@@ -182,13 +177,13 @@ class _BlocshoesViewState extends State<BlocshoesView> {
                   }
                   return Stack(
                     children: [
-                      Icon(Icons.shopping_bag_outlined),
+                     const Icon(Icons.shopping_bag_outlined),
                       context.read<BasketCubit>().basketItems.length > 0
                           ? Positioned(
                               bottom: 11,
                               child: Container(
-                                padding: EdgeInsets.all(3),
-                                decoration: BoxDecoration(
+                                padding: const EdgeInsets.all(3),
+                                decoration: const BoxDecoration(
                                     shape: BoxShape.circle, color: Colors.red),
                                 child: Text(
                                   context
@@ -196,7 +191,7 @@ class _BlocshoesViewState extends State<BlocshoesView> {
                                       .basketItems
                                       .length
                                       .toString(),
-                                  style: TextStyle(
+                                  style:const TextStyle(
                                       color: Colors.white, fontSize: 12),
                                 ),
                               ),
@@ -208,12 +203,12 @@ class _BlocshoesViewState extends State<BlocshoesView> {
               ),
               label: 'Sepet',
             ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_border), label: 'Favori'),
-            BottomNavigationBarItem(
+          const  BottomNavigationBarItem(
+                icon:  Icon(Icons.favorite_border), label: 'Favori'),
+           const BottomNavigationBarItem(
                 icon: Icon(Icons.person_2_outlined), label: 'Hesabım'),
           ],
-          selectedItemColor: Color.fromARGB(255, 89, 255, 0),
+          selectedItemColor:const Color.fromARGB(255, 89, 255, 0),
           unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
           iconSize: 30,
           currentIndex: _selectedIndex,

@@ -46,7 +46,7 @@ class _basketViewState extends State<basketView> {
                   style: TextStyle(color: Colors.black),
                 ),
                 accountEmail: const Text("ahmettalhadinc50@gmail.com",
-                    style: TextStyle(color: Colors.black)), // "gmail" düzeltilmiş
+                    style: TextStyle(color: Colors.black)),
                 currentAccountPicture: ClipOval(
                   child: Image.network(
                     "https://media.licdn.com/dms/image/D4D03AQHYial4hJsbYQ/profile-displayphoto-shrink_200_200/0/1700325137144?e=1707955200&v=beta&t=JFPyP-bb0J_EPHR-p1WOb0dZMfG9pwdY-IOzmJxKE4E",

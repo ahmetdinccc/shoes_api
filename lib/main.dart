@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shoes_bloc/bloc/bloc_shoes_view.dart';
+import 'package:shoes_bloc/page/bloc_shoes_view.dart';
 import 'package:shoes_bloc/bloc/basket_cubit.dart';
 import 'package:shoes_bloc/bloc/shoes_cubit.dart';
 import 'package:shoes_bloc/bloc/shoes_repository.dart';
